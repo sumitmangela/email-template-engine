@@ -1,0 +1,13 @@
+
+## db configs ##---------------------------------
+
+# PGHOST=localhost
+# PGUSER=user
+# PGDATABASE=db
+# PGPASSWORD=password
+# PGPORT=5432
+# PGSCHEMA=user
+
+## file configs ##---------------------------------
+
+SINGLE_TEMPLATE_SQL = '' #enter name of the file if you want to generate sql for that single file e.g. dummy_email3.html, keep it empty if you want to generate sql for all files in dist folder

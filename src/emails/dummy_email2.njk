@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block content %} 
+
+<div class="content-container">
+  <div class="heading">Please share your feedback</div>
+
+  <p>Hello ({{ customer }}),</p>
+    {# ({{ customer }}) denotes a dynamic variable which will be swapped with a value from db in backend, this will look the same in rendered HTML #}
+
+  <p>We at ${COMPANY_NAME} value your feeedback. so please provide yout valuable feeedback using following link </p>
+   <div class="link">
+      <a href="https://www.google.com/" target="_blank" >Feedback Link</a>
+   </div>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book..</p>
+
+    {% include "../templates/partials/common_content.njk" %} 
+
+    <p>
+        If you have questions please reach out to our ${SUPPORT_TEAM} <a href="mailto: ${SUPPORT_TEAM_EMAIL}" target="_blank"><b><u>here.</u></b></a>
+    </p>
+     {# ${SUPPORT_TEAM} denotes nunjucks variable which will be swapped with a value from data.json when HTML is rendered #}
+
+   <p>Sincerely, <br>
+      ${SUPPORT_TEAM}
+   </p>
+</div>
+
+{% endblock %}

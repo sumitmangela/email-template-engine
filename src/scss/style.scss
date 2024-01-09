@@ -1,0 +1,198 @@
+///////////////////////////
+/* default email css */
+//////////////////////////////
+
+html,
+body {
+   margin: 0 auto !important;
+   padding: 0 !important;
+   height: 100% !important;
+   width: 100% !important;
+}
+
+body{
+   margin: 0; 
+   padding: 0 !important; 
+   mso-line-height-rule: exactly;
+}
+
+body {
+   font-family: sans-serif;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 1.8;
+   color: rgba(0, 0, 0, .4);
+}
+
+
+center{
+   width: 100%;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+   margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+   mso-table-lspace: 0pt !important;
+   mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+   border-spacing: 0 !important;
+   border-collapse: collapse !important;
+   table-layout: fixed !important;
+   margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+   -ms-interpolation-mode: bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+   text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],
+/* iOS */
+.unstyle-auto-detected-links *,
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+   color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img+div {
+   display: none !important;
+}
+
+.email-container{
+   max-width: 100%; margin: 0 auto;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+   u~div .email-container {
+      min-width: 320px !important;
+   }
+}
+
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+   u~div .email-container {
+      min-width: 375px !important;
+   }
+}
+
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+   u~div .email-container {
+      min-width: 414px !important;
+   }
+}
+
+.email-container-table{
+   margin: auto;
+   td{
+      padding: 1em 2.5em;
+   }
+   .main{
+      background-size: cover; height: 250px; padding: 1em 2.5em; text-align: center
+   }
+}
+
+///////////////////////////
+/* custom css */
+/////////////////////////////
+
+.header{
+   background: #8ed8ff;
+   display: flex;
+   justify-content: center;
+   padding: 10px;
+   img{
+      width:auto; 
+      max-height: 250px; 
+      max-width:100%
+   }
+}
+
+.footer{
+   padding: 0 1em; 
+   color: #606060; 
+   font-size: small;
+   .footer-header{
+      color:#2887b9; margin: 0; font-size: 1.3rem
+    }
+    a {
+      font-weight: bold;
+      color: #ff7b25 !important;
+    }
+}
+
+.content-container{
+   padding: 0 1em; 
+   text-align: center; 
+   color: #606060; 
+   text-align: left;
+
+   .heading{
+      color: #2887b9;
+      font-size: x-large;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   a{
+      color: #ff7b25;
+   }
+   
+   .link{
+      text-decoration: underline; 
+      text-align: center; 
+      color: #ff7b25; 
+      font-weight: bold; 
+      padding-top: 10px; 
+      font-size: medium; 
+      // font-style: italic;
+
+      a{
+         color: #ff7b25;
+      }
+   }
+
+   .color-primary{
+      color:#ff7b25
+   }
+
+   .color-secondary{
+      color:#2887b9
+   }
+
+   .font-italic{
+      font-style: italic;
+   }
+
+}
+
+.common-content{
+   .color-primary{
+      color:#2887b9
+   }
+}
